@@ -1,22 +1,38 @@
 public class Printing {
 
     public static void printStars(int amount) {
-        // 39.1
-        // you can print one star with the command
-        // System.out.print("*");
-        // call this command amount times        
+       int temp= 0;
+       while (temp < amount){
+           System.out.print("*");
+           temp++;
+       }
+        System.out.println("");
+ 
     }
 
     public static void printSquare(int sideSize) {
-        // 39.2
+        int temp2 = 0;
+        
+        while(temp2 < sideSize){
+        printStars(sideSize);
+        temp2++;
+        }
     }
 
     public static void printRectangle(int width, int height) {
-        // 39.3
+        int a=0;
+        while(a < height){
+            printStars(width);
+            a++;
+        }
     }
 
     public static void printTriangle(int size) {
-        // 39.4
+        int b=0;
+        while (b < size){
+            printStars(b+1);
+            b++;
+        }
     }
 
     public static void main(String[] args) {

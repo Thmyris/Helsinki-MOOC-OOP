@@ -16,7 +16,26 @@ public class HangmanUserInteface {
         System.out.println("");
 
         // PROGRAM YOUR SOLUTION HERE
-
+        
+        
+        while(hangman.gameOn()){
+            System.out.println("Type a command: ");
+            String inp = reader.nextLine();
+            if(inp.equals("status")){
+                hangman.printStatus();
+            }
+            else if(inp.length() == 1){
+                hangman.guess(inp);
+            }
+            else if(inp.isEmpty()){
+                printMenu();
+            }
+            else if(inp.equals("quit")){
+                break;
+            }
+            hangman.printMan();
+            hangman.printWord();
+        }
 
         System.out.println("Thank you for playing!");
     }
